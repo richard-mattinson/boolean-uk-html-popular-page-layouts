@@ -1,0 +1,103 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* GRID 3x1 */
+.container {
+Display: grid;
+Grid-template:
+"profile feed suggestions" 1fr /
+200px 1fr 200px;
+
+height: 100vh;
+grid-gap:5px;
+margin: 0px 200px;
+border: black solid 2px;
+}
+
+.profile {
+    grid-area: profile;
+    background: yellowgreen;
+}
+
+.feed {
+    grid-area: feed;
+    background: red;
+}
+
+.suggestions {
+    grid-area: suggestions;
+    background: yellow;
+}
+
+.profile {
+    display: grid;
+    grid-template:
+    "myItems" 300px
+    "analytics" 150px
+    "history" 1fr /
+    1fr;
+
+    grid-gap: 2px;
+}
+    
+.myItems {
+    grid-area: myItems;
+    border: black dashed 2px;
+}
+
+.analytics {
+    grid-area: analytics;
+    border: black dashed 2px;
+}
+
+.history {
+    grid-area: history;
+    border: black dashed 2px;
+}
+
+.feed {
+    display: grid;
+    grid-template:
+    "newPost" 100px
+    "timeline" 1fr /
+    1fr;
+
+    grid-gap: 2px;
+}
+
+.newPost {
+    grid-area: newPost;
+    border: black dashed 2px;
+}
+
+.feed {
+    grid-area: feed;
+    border: black dashed 2px;
+}
+
+.suggestions {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.news {
+    border: black dashed 2px;
+}
+
+.courses {
+    border: black dashed 2px;
+}
+
+.addToFeed {
+    border: black dashed 2px;
+}
+

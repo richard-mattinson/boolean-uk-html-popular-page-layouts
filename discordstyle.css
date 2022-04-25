@@ -1,0 +1,51 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* GRID 4x2 */
+.container {
+Display: grid;
+Grid-template:
+"nav server channel settings" 50px
+"nav server main main" 1fr /
+50px 100px 1fr 150px;
+
+height: 100vh;
+grid-gap:5px;
+}
+
+.nav {
+    grid-area: nav;
+    background: blue;
+}
+
+.server {
+    grid-area: server;
+    background: red;
+}
+
+.channel {
+    grid-area: channel;
+    background: yellow;
+}
+
+.settings {
+    grid-area: settings;
+    background: orange;
+}
+
+.main {
+    grid-area: main;
+    background:purple;
+}
+
+
+

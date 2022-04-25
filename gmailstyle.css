@@ -1,0 +1,95 @@
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* GRID 4x3 */
+.container {
+Display: grid;
+Grid-template:
+"header-logo search profile profile" 50px
+"folders mail settings other-apps" 1fr
+"meet mail settings other-apps" 1fr /
+200px 1fr 200px 50px;
+
+height: 100vh;
+grid-gap: 5px;
+}
+
+.header-logo {
+    grid-area: header-logo;
+    background: blue;
+}
+
+.search {
+    grid-area: search;
+    background: red;
+}
+
+.profile {
+    grid-area: profile;
+    background: yellow;
+}
+
+.folders {
+    grid-area: folders;
+    background: greenyellow;
+}
+
+.mail {
+    grid-area: mail;
+    background: orange;
+}
+
+.settings{
+    grid-area: settings;
+    background:purple;
+}
+
+.other-apps {
+    grid-area: other-apps;
+    background: blue;
+}
+
+.meet {
+    grid-area: meet;
+    background: red;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        Grid-template:
+        "header-logo search profile" 50px
+        "folders mail settings" 1fr
+        "meet mail settings" 1fr /
+        100px 1fr 200px;
+    }
+
+    .other-apps {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        Grid-template:
+        "header-logo search" 50px
+        "folders mail" 1fr
+        "meet mail" 1fr /
+        100px 1fr;
+    }
+
+    .other-apps, .settings, .profile {
+        display: none;
+    }
+}
+
+
+
