@@ -47,5 +47,30 @@ grid-gap:5px;
     background:purple;
 }
 
+@media screen and (max-width: 800px) {
+    .container {
+        Grid-template:
+        "nav server channel" 50px
+        "nav server main" 1fr /
+        50px 100px 1fr;
+    }
+
+    .settings {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        Grid-template:
+        "server channel" 50px
+        "server main" 1fr /
+        100px 1fr;
+    }
+
+    .nav {
+        display: none;
+    }
+}
 
 
